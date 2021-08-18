@@ -1,0 +1,89 @@
+---
+name: Marco Ramos
+position: "Applied Economist and Data Scientist"
+address: "San Luis Potosi, Mexico"
+phone: +52 44 42 251585
+profilepic: marco2.JPG
+email: "marcoyel21@gmail.com"
+github: marcoyel21
+linkedin: marcoyel21
+date: "`r format(Sys.time(), '%B %Y')`"
+aboutme: "Econometrics by profession, Data Science by vocation. Commited to the development of creative, sustainable and smart solutions to the problems firms and countries face. Econometrics, quasi-experimental methods, experimental designs, causal inference, network analysis, modeling, data mining, machine learning, visualization, big-data anlaysis, economic and social research and report automation"
+output: vitae::twentyseconds
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+```
+
+
+# Education
+
+```{r}
+library(tibble)
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
+  "Bachelor in International Relations (Special Mention)", "2013-2018", "Mexico City", "Autonomous Technological Institute of Mexico (ITAM)",
+  "Undergraduate Summer School", "2017", "Tel Aviv", "Tel Aviv University (TAU)",
+  "Master in Applied Economics", "2020-2021 ", "Mexico City","Autonomous Technological Institute of Mexico (ITAM)",
+  "MicroMaster Program in Statistics and Data Science", "2020-2021", "Online", "MITx", 
+  "Master in Data Science", "2020-", "ITAM", "Mexico City",
+
+) %>% 
+  detailed_entries(Degree, Year, Institution, Where)
+```
+
+# Certifications
+
+ * *Masculinity, practices around being men* at University Claustro de Sor Juana.
+ * *Probability: the science of Uncertainity and Data* at Mitx.
+ * *Machine Learning with Python: from Linear Models to Deep Learning* at Mitx.
+ * *Data Analysis: Statistical Modeling and Computation in Applications* at Mitx.
+ 
+ 
+# Experience
+
+```{r}
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
+  "Researcher and Data Analyst", "2017-2019", "México Evalúa (think tank)", "Research in antitrust policy, energy markets and State Owned Enterprises",
+  "Head of Department of Impact Evaluation", "2019-2020", "Mexican Federal Secretary of the Interior", "Coordination of the process of data collection for the justice and criminal related datasets; and public policy impact evaluation",
+  "Advisor", "2019-","Mendeley","Promoting the digitalization and automation of research and investigation",
+  "Systems Manager","2020","Government of Mexico City","Design, development and implementation of the new Mexico's City procurement system; and public spending big data analysis."
+) %>% 
+  detailed_entries(Degree, Year, Institution, Where)
+```
+
+# Distinctions and awards
+
+```{r}
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
+"World Championship Engineering Inspiration","2013", "St Louis, Missouri", "As a memember of the FIRST robotics team Lambot 3478",
+"Best think tank research program in Mexico about energy policy by University of Pennsylvania", "2018", "Mexico City, Mexico", "As a member of the Economic Competition and Regulation team at México Evalua",
+"Research Protocol Prize","2020","Mexico City, Mexico", "Awarded by the National Anticorruption System with the protocol 'Development and execution of a logistic model to detect irregularities in the procurement process during the epidemiological crisis of COVID19'",
+"Finantial Inclusion Essay First Place in Master Degree Category","2021","Mexico City, Mexico", "Awarded by the National Comission on Values and Banking with the research proyect called 'Gender Gap or Ommited Variable Bias: An analysis with quasiexperimental methods on finantial inclusion in Mexico'"
+) %>% 
+  detailed_entries(Degree, Year, Institution, Where)
+```
+
+# Skills 
+
+ * Knowledge of R, Python, Shell/Bash and SQL computer languages.
+ * R Studio, R Markdown, Git, Gephi, LATEX, Pycharm, Jupyter, STATA, SPSS, MATLAB, DYNARE, Spark expert.
+ * Native in spanish, fluent in english (TOEFL ITP C1) and intermedium in french (DELF B1).
+
+---
+ 
+# Publications
+
+```{r}
+library(dplyr)
+knitr::write_bib(c("vitae", "tibble"), "packages.bib")
+
+bibliography_entries("packages_1.bib") %>%
+  arrange(desc(author$family), issued)
+```
+
+
